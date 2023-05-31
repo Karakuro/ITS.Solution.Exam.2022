@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Site.css" rel="stylesheet" />
+    <script src="js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script defer src="js/Site.js"></script>
+    <title></title>
+</head>
+<body>
+    <!--Home page di partenza in caso di sviluppi con HTML5, CSS3 e Javascript/Jquery-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Home Page</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div aria-live="polite" aria-atomic="true" class="position-relative">
+            <!-- Position it: -->
+            <!-- - `.toast-container` for spacing between toasts -->
+            <!-- - `top-0` & `end-0` to position the toasts in the upper right corner -->
+            <!-- - `.p-3` to prevent the toasts from sticking to the edge of the container  -->
+            <div class="toast-container top-0 end-0 p-3" id="toast-area">
+            </div>
+        </div>
+        <form id="submitForm" class="row">
+            <h3>Analisi prodotti alimentari da codice a barre</h3>
+            <div class="mb-3">
+                <label for="barcode" class="form-label">Barcode</label>
+                <input type="text" pattern="^[0-9]{13}$" class="form-control" id="barcode" aria-describedby="barcodeHelp" required>
+                <div id="barcodeHelp" class="form-text">Inserisci un barcode di un prodotto</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Invia</button>
+        </form>
+        <div class="row">
+            <div id="ProductDetails">
+
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div id="errDiv" class="alert alert-danger" role="alert" hidden>
+                Errore
+            </div>
+        </div>
+
+    </main>
+
+    
+</body>
+</html>
